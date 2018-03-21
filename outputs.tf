@@ -1,5 +1,9 @@
 output "connection_id" {
-  value = "${join("", aws_vpc_peering_connection.default.*.id)}"
+  value = "${module.vpc_peering.connection_id}"
+}
+
+output "accept_status" {
+  value = "${module.vpc_peering.accept_status}"
 }
 
 output "kops_vpc_id" {

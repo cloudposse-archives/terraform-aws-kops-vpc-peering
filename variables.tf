@@ -3,6 +3,11 @@ variable "enabled" {
   description = "Set to false to prevent the module from creating or accessing any resources"
 }
 
+variable "auto_accept" {
+  default     = "true"
+  description = "Automatically accept the peering (both VPCs need to be in the same AWS account)"
+}
+
 variable "dns_zone" {
   type        = "string"
   description = "Name of the Kops DNS zone"
@@ -31,9 +36,9 @@ variable "backing_services_vpc_id" {
   description = "Backing services VPC ID"
 }
 
-variable "route_table_ids" {
-  type        = "list"
-  description = "List of route table IDs to create routes from requestor VPC to acceptor VPC"
+variable "backing_services_allow_remote_vpc_dns_resolution" {
+  default     = "true"
+  description = "Allow the backing services VPC to resolve public DNS hostnames to private IP addresses when queried from instances in the Kops VPC"
 }
 
 variable "namespace" {
