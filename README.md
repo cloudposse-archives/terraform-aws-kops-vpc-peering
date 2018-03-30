@@ -1,6 +1,6 @@
-# terraform-aws-vpc-kops-peering [![Build Status](https://travis-ci.org/cloudposse/terraform-aws-vpc-kops-peering.svg?branch=master)](https://travis-ci.org/cloudposse/terraform-aws-vpc-kops-peering)
+# terraform-aws-kops-vpc-peering [![Build Status](https://travis-ci.org/cloudposse/terraform-aws-kops-vpc-peering.svg?branch=master)](https://travis-ci.org/cloudposse/terraform-aws-kops-vpc-peering)
 
-Terraform module to create a peering connection between a backing services VPC and a VPC created by [Kops](https://github.com/kubernetes/kops)
+Terraform module to create a peering connection between a backing services VPC and a VPC created by [Kops](https://github.com/kubernetes/kops).
 
 The module depends on the following [Cloud Posse][website] Terraform modules
 
@@ -11,8 +11,8 @@ The module depends on the following [Cloud Posse][website] Terraform modules
 ## Usage
 
 ```hcl
-module "kops_peering" {
-  source                                           = "git::https://github.com/cloudposse/terraform-aws-vpc-kops-peering.git?ref=master"
+module "kops_vpc_peering" {
+  source                                           = "git::https://github.com/cloudposse/terraform-aws-kops-vpc-peering.git?ref=master"
   namespace                                        = "cp"
   stage                                            = "dev"
   name                                             = "cluster"
@@ -46,7 +46,7 @@ module "kops_peering" {
 | `backing_services_allow_remote_vpc_dns_resolution`  | `true`     | Allow the backing services VPC to resolve public DNS hostnames to private IP addresses when queried from instances in the `Kops` VPC  | No       |
 
 
-__NOTE:__ The backing services VPC must have subnets associated with route tables
+__NOTE:__ The backing services VPC must have subnets associated with route tables.
 
 __NOTE:__ When enabled, the DNS resolution feature (`backing_services_allow_remote_vpc_dns_resolution`)
 require that the backing services VPC must have support for the DNS hostnames enabled.
@@ -75,18 +75,18 @@ https://github.com/sagansystems/terraform-aws-vpc-kops-peering
 
 **Got a question?**
 
-File a GitHub [issue](https://github.com/cloudposse/terraform-aws-vpc-kops-peering/issues), send us an [email](mailto:hello@cloudposse.com) or reach out to us on [Gitter](https://gitter.im/cloudposse/).
+File a GitHub [issue](https://github.com/cloudposse/terraform-aws-kops-vpc-peering/issues), send us an [email](mailto:hello@cloudposse.com) or reach out to us on [Gitter](https://gitter.im/cloudposse/).
 
 
 ## Contributing
 
 ### Bug Reports & Feature Requests
 
-Please use the [issue tracker](https://github.com/cloudposse/terraform-aws-vpc-kops-peering/issues) to report any bugs or file feature requests.
+Please use the [issue tracker](https://github.com/cloudposse/terraform-aws-kops-vpc-peering/issues) to report any bugs or file feature requests.
 
 ### Developing
 
-If you are interested in being a contributor and want to get involved in developing `terraform-aws-vpc-kops-peering`, we would love to hear from you! Shoot us an [email](mailto:hello@cloudposse.com).
+If you are interested in being a contributor and want to get involved in developing `terraform-aws-kops-vpc-peering`, we would love to hear from you! Shoot us an [email](mailto:hello@cloudposse.com).
 
 In general, PRs are welcome. We follow the typical "fork-and-pull" Git workflow.
 
@@ -125,7 +125,7 @@ See [LICENSE](LICENSE) for full details.
 
 ## About
 
-`terraform-aws-vpc-kops-peering` is maintained and funded by [Cloud Posse, LLC][website].
+`terraform-aws-kops-vpc-peering` is maintained and funded by [Cloud Posse, LLC][website].
 
 ![Cloud Posse](https://cloudposse.com/logo-300x69.png)
 
