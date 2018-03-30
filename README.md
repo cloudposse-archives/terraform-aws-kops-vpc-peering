@@ -68,7 +68,7 @@ https://www.terraform.io/docs/providers/aws/r/vpc_peering.html#allow_remote_vpc_
 
 Thanks to [Gladly.com](https://www.gladly.com/) for the inspiration with this wonderful module:
 
-https://github.com/sagansystems/terraform-aws-kops-vpc-peering
+https://github.com/sagansystems/terraform-aws-vpc-kops-peering
 
 
 ## Help
