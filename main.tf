@@ -1,6 +1,6 @@
 # Lookup VPC of the kops cluster
 module "kops_metadata" {
-  source       = "git::https://github.com/cloudposse/terraform-aws-kops-metadata.git?ref=tags/0.1.0"
+  source       = "git::https://github.com/cloudposse/terraform-aws-kops-metadata.git?ref=tags/0.1.1"
   enabled      = "${var.enabled}"
   dns_zone     = "${var.dns_zone}"
   bastion_name = "${var.bastion_name}"
