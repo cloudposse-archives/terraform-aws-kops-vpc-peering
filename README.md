@@ -17,7 +17,7 @@ module "kops_vpc_peering" {
   stage                                            = "dev"
   name                                             = "cluster"
   backing_services_vpc_id                          = "vpc-XXXXXXXX"
-  dns_zone                                         = "cluster.domain.com"
+  dns_zone                                         = "us-west-2.domain.com"
   bastion_name                                     = "bastion"
   masters_name                                     = "masters"
   nodes_name                                       = "nodes"
