@@ -10,7 +10,7 @@ module "kops_metadata" {
 
 # Create a peering connection between the backing services VPC and Kops VPC
 module "vpc_peering" {
-  source                                    = "git::https://github.com/cloudposse/terraform-aws-vpc-peering.git?ref=tags/0.1.0"
+  source                                    = "git::https://github.com/cloudposse/terraform-aws-vpc-peering.git?ref=tags/0.1.1"
   enabled                                   = "${var.enabled}"
   namespace                                 = "${var.namespace}"
   name                                      = "${var.name}"

@@ -17,7 +17,7 @@ module "kops_vpc_peering" {
   stage                                            = "dev"
   name                                             = "cluster"
   backing_services_vpc_id                          = "vpc-XXXXXXXX"
-  dns_zone                                         = "cluster.domain.com"
+  dns_zone                                         = "us-west-2.domain.com"
   bastion_name                                     = "bastion"
   masters_name                                     = "masters"
   nodes_name                                       = "nodes"
@@ -50,6 +50,7 @@ __NOTE:__ The backing services VPC must have subnets associated with route table
 
 __NOTE:__ When enabled, the DNS resolution feature (`backing_services_allow_remote_vpc_dns_resolution`)
 require that the backing services VPC must have support for the DNS hostnames enabled.
+
 This can be done using the [`enable_dns_hostnames`](https://www.terraform.io/docs/providers/aws/r/vpc.html#enable_dns_hostnames) attribute in the `aws_vpc` resource.
 
 https://www.terraform.io/docs/providers/aws/r/vpc_peering.html#allow_remote_vpc_dns_resolution
