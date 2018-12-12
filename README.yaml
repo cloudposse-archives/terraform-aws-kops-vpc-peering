@@ -7,6 +7,24 @@
 # Name of this project
 name: terraform-aws-kops-vpc-peering
 
+# Tags of this project
+tags:
+  - aws
+  - terraform
+  - terraform-modules
+  - kops-kubernetes
+  - kops
+  - kubernetes
+  - vpc
+  - ec2
+  - peering
+  - vpn
+  - backing-services
+
+# Categories of this project
+categories:
+  - terraform-modules/kops-kubernetes
+
 # Logo for this project
 #logo: docs/logo.png
 
